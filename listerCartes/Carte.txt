@@ -1,0 +1,34 @@
+
+package ListerCartes;
+
+
+public class Carte {
+
+    Valeurs valeur;
+    Couleurs couleur;
+/**
+ *Permet d'instancier une Carte en alimentant ses attributs : une couleur et une valeur.
+ * @param valeur correspond à la valeur que prend la carte
+ * @param couleur correspond à la famille de couleur à laquelle la carte appartient
+ */
+    public Carte(Valeurs valeur, Couleurs couleur) {
+        this.valeur = valeur;
+        this.couleur = couleur;
+    }
+/**
+ * Cette méthode permet d'afficher les attributs de la carte de manière lisible
+ * @return la description des attributs de l'objet carte
+ */
+    @Override
+    public String toString() {
+
+        return this.valeur + " de " + this.couleur;
+
+    }
+
+
+
+
+
+
+}

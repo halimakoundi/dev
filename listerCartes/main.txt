@@ -1,0 +1,42 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ListerCartes;
+
+/**
+ *
+ * @author cdi211
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+
+
+        Carte[] tableau = new Carte[52];
+        int i = 0;
+        //cette première boucle permet d'itérer sur la liste des familles
+        for (Couleurs famille : Couleurs.values()) {
+            //cette seconde boucle permet d'itérer sur les Valeurs possibles
+            for (Valeurs valeur : Valeurs.values()) {
+
+               
+                tableau[i] = new Carte(valeur, famille);
+                i++;
+
+            }
+        }
+
+        System.out.println("Liste du jeu de 52 cartes : ");
+        for (int j = 0; j < tableau.length; j++) {
+            System.out.println(tableau[j]);
+        }
+
+
+
+    }
+}

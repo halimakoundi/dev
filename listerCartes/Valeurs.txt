@@ -1,0 +1,30 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ListerCartes;
+
+/**
+ * Enumération des valeurs possibles pour une carte
+ * @author cdi211
+ */
+public enum Valeurs {
+
+    Deux(2), Trois(3), Quatre(4), Cinq(5), Six(6), Sept(7), Huit(8), Neuf(9), Dix(10), Vallet(0), Dame(0), Roi(0), As(0);
+    private final int chiffre ;
+    Valeurs(int numCarte) {
+        this.chiffre = numCarte;
+    }
+
+    @Override
+    public String toString() {
+        if(this.chiffre>0){
+
+            return String.valueOf(this.chiffre) ;
+
+        }
+        return this.name() ;
+    }
+
+   
+}
